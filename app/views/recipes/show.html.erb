@@ -1,0 +1,10 @@
+<h1>Recipe Details</h1>
+
+<p><strong>Name:</strong> <%= @recipe.name %></p>
+
+<strong>Ingredients:</strong><br>
+<%= render partial: 'ingredients/ingredient_list', locals: { ingredients: @recipe.ingredients }%>
+
+<hr>
+
+<%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>

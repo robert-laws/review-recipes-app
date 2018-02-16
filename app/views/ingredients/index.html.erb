@@ -1,0 +1,9 @@
+<%= provide :title, "Ingredients" %>
+
+<h1>All Ingredients</h1>
+
+<%= render partial: 'ingredient_list', locals: { ingredients: @ingredients } %>
+
+<hr>
+
+<%= link_to 'Create a New Ingredient', new_ingredient_path %>

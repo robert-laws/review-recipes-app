@@ -1,0 +1,16 @@
+<%= provide :title, "Recipes" %>
+
+<h1>All Recipes</h1>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <%= link_to recipe.name, recipe_path(recipe) %>
+      <%= render partial: 'ingredients/ingredient_list', locals: { ingredients: recipe.ingredients }%>
+    </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to 'Create a New Recipe', new_recipe_path %>

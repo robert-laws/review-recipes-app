@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Trisha Yearwood's Blueberry Pancakes Recipe
+# http://www.foodnetwork.com/recipes/trisha-yearwood/blueberry-pancakes-recipe.html
+
+blueberry_pancakes = Recipe.new(name: 'Blueberry Pancakes')
+blueberry_pancakes_ingredients = ['All-purpose flour', 'Sugar', 'Baking powder', 'Baking soda', 'Salt', 'Large eggs', 'Milk', 'Sour cream', 'Butter', 'Vanilla extract', 'Blueberries', 'Lemon zest']
+blueberry_pancakes_ingredients.each{|i| blueberry_pancakes.ingredients.build(name: i)}
+blueberry_pancakes.save
+
+# Jake the Dog's Bacon Pancakes Recipe
+# https://www.youtube.com/watch?v=1eO5U_uN7DQ
+
+bacon_pancakes = Recipe.new(name: 'Bacon Pancakes')
+bacon_pancakes_ingredients = ['Some bacon', 'Pancake']
+bacon_pancakes_ingredients.each{|i| bacon_pancakes.ingredients.build(name: i)}
+bacon_pancakes.save
